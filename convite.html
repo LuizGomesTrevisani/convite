@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Casamento - Luana & Luiz</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes:wght@400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="convite.css">
+</head>
+<body>
+    <!-- Pétalas flutuantes (camada não clicável) -->
+    <div class="petals-container" id="petalsContainer"></div>
+
+    <!-- Container principal -->
+    <div class="invitation-container">
+        <!-- Cartão do convite -->
+        <div class="invitation-card">
+            <!-- Flores aquarela superiores -->
+            <div class="watercolor-flowers top-flowers"></div>
+            
+            <!-- Cabeçalho - Pais -->
+            <div class="parents-header">
+                <div class="parents-text">JUNTAMENTE COM SEUS PAIS</div>
+                <div class="parents-names">
+                    <div class="bride-parents">
+                        <div class="parent-name">Lia Feitosa Gomes</div>
+                        <div class="parent-name">Valdomiro Gomes da Silva</div>
+                    </div>
+                    <div class="groom-parents">
+                        <div class="parent-name">Silvia Gomes Silva</div>
+                        <div class="parent-name">Luiz Trevisani Neto</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nomes dos noivos -->
+            <div class="couple-section">
+                <h1 class="bride-name">Luana</h1>
+                <div class="couple-connector">e</div>
+                <h1 class="groom-name">Luiz</h1>
+            </div>
+
+            <!-- Convite -->
+            <div class="invitation-text">
+                CONVIDAM <span class="guest-name" id="guestName">convidado</span> PARA O SEU CASAMENTO
+            </div>
+
+            <!-- Data com separadores -->
+            <div class="wedding-date">
+                <span class="date-part">15</span>
+                <span class="date-separator">♥</span>
+                <span class="date-part">NOVEMBRO</span>
+                <span class="date-separator">♥</span>
+                <span class="date-part">2025</span>
+            </div>
+
+            <!-- Detalhes do evento -->
+            <div class="event-details">
+                <div class="time-location"><p class="date-part">18:00 h</p><br> Av. Coronel Antônio Estanislau do Amaral, 140</div>
+            </div>
+
+            <!-- Botões circulares -->
+            <div class="action-buttons">
+                <div class="button-circle" id="confirmBtn">
+                    <div class="circle-icon" id="confirmIcon">💌</div>
+                    <div class="circle-label">CONFIRMAÇÃO<br>DE PRESENÇA</div>
+                    <div class="check-mark" id="checkMark">✓</div>
+                </div>
+                
+                <div class="button-circle" id="locationBtn">
+                    <div class="circle-icon">📍</div>
+                    <div class="circle-label">LOCAL<br>CERIMÔNIA</div>
+                </div>
+                
+                <div class="button-circle" id="giftsBtn">
+                    <div class="circle-icon">🎁</div>
+                    <div class="circle-label">LISTA DE<br>PRESENTES</div>
+                </div>
+                
+                <div class="button-circle" id="websiteBtn">
+                    <div class="circle-icon"><img src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png" alt="insta"></div>
+                    <div class="circle-label">INSTAGRAM</div>
+                </div>
+            </div>
+
+            <!-- Flores aquarela inferiores -->
+            <div class="watercolor-flowers bottom-flowers"></div>
+
+            <!-- Mensagem bíblica -->
+            <div class="biblical-message">
+                “O casamento de vocês é um presente de Deus; que Ele continue sendo o centro dessa aliança, renovando as forças e a alegria do casal a cada dia.”
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Externo -->
+    <script src="convite.js"></script>
+</body>
+</html>
