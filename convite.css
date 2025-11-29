@@ -231,7 +231,7 @@ body::before {
 /* Botões circulares */
 .action-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
     margin: 30px 0;
     opacity: 1;
