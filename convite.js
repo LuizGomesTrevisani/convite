@@ -55,13 +55,6 @@ function viewLocation1() {
     window.open(mapsURL, '_blank');
 }
 
-// Função para ver lista de presentes
-function viewGiftList() {
-    // URL da loja/site de presentes (você deve ajustar para a URL real)
-    const giftsURL = 'https://luizluana.site/#presentes';
-    window.open(giftsURL, '_blank');
-}
-
 // Função para ir ao site dos noivos
 function visitWebsite() {
     // URL do site dos noivos
