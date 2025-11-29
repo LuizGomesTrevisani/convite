@@ -212,6 +212,8 @@ body::before {
 }
 
 .time-location {
+    display: flex;
+    justify-content: center;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
     font-weight: 400;
