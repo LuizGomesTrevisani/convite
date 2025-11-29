@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     if (casamentoBtn) {
-        giftsBtn.addEventListener('click', function(e) {
+        casamentoBtn.addEventListener('click', function(e) {
             e.preventDefault();
             viewLocation1();
         });
