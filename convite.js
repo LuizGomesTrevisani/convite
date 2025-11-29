@@ -46,8 +46,12 @@ function createPetals() {
 
 // Função para ver localização da cerimônia
 function viewLocation() {
-    // Coordenadas da Igreja São José (você deve ajustar para o local real)
     const mapsURL = 'https://maps.app.goo.gl/c8Lq8aw9DRryhmty8';
+    window.open(mapsURL, '_blank');
+}
+
+function viewLocation1() {
+    const mapsURL = 'https://maps.app.goo.gl/6Hp8sQV65hVw6vMN9';
     window.open(mapsURL, '_blank');
 }
 
@@ -130,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicializar outros event listeners
     const locationBtn = document.getElementById('locationBtn');
-    const giftsBtn = document.getElementById('giftsBtn');
+    const casamentoBtn = document.getElementById('casamentoBtn');
     const websiteBtn = document.getElementById('websiteBtn');
     
     if (locationBtn) {
@@ -140,10 +144,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    if (giftsBtn) {
+    if (casamentoBtn) {
         giftsBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            viewGiftList();
+            viewLocation1();
         });
     }
     
