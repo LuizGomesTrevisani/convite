@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../attached_assets/modelo1_1759159819186.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #5a5a5a;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.40);
+    z-index: -1;
+}
+
+/* Pétalas flutuantes (não clicável) */
+.petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.petal {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(45deg, #f4a5a5, #f8c8c8);
+    border-radius: 50% 0;
+    animation: petalFall 10s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes petalFall {
+    0% { 
+        transform: translateY(-100px) rotate(0deg); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(100vh) rotate(720deg); 
+        opacity: 0; 
+    }
+}
+
+/* Container principal */
+.invitation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Cartão do convite */
+.invitation-card {
+    border-radius: 15px;
+    padding: 40px 30px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: cardEntrance 1.5s ease-out;
+}
+
+@keyframes cardEntrance {
+    0% { 
+        transform: scale(0.9) translateY(30px); 
+        opacity: 0; 
+    }
+    100% { 
+        transform: scale(1) translateY(0); 
+        opacity: 1; 
+    }
+}
+
+/* Flores decorativas removidas - usando imagem de fundo principal */
+.watercolor-flowers {
+    display: none;
+}
+
+/* Seção dos pais */
+.parents-header {
+    margin-bottom: 25px;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+.parents-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #252525;
+    margin-bottom: 10px;
+}
+
+.parents-names {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.bride-parents, .groom-parents {
+    flex: 1;
+}
+
+.parent-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.3;
+}
+
+/* Seção do casal */
+.couple-section {
+    margin: 30px 0;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.bride-name, .groom-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #b5838d;
+    margin: 8px 0;
+    text-shadow: 0 2px 8px rgba(181, 131, 141, 0.2);
+    letter-spacing: 1px;
+}
+
+.couple-connector {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #a0a0a0;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* Texto do convite */
+.invitation-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+    margin: 25px 0;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 0.9s forwards;
+}
+
+.guest-name {
+    color: #8b6f6f;
+    font-weight: 600;
+}
+
+/* Data */
+.wedding-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #8b6f6f;
+    margin: 20px 0;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 1.2s forwards;
+}
+
+.date-part {
+    color: #8b6f6f;
+}
+
+.date-separator {
+    color: #f4a5a5;
+    margin: 0 8px;
+    font-size: 1.2rem;
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Detalhes do evento */
+.event-details {
+    margin: 20px 0 30px 0;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+}
+
+.time-location {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.address {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+/* Botões circulares */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 30px 0;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 1.8s forwards;
+}
+
+.button-circle {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    border: 2px solid #e6b8c2;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background: linear-gradient(145deg, #ffffff, #f9f7f8);
+    padding: 12px;
+    box-shadow: 
+        0 4px 15px rgba(230, 184, 194, 0.2),
+        0 2px 6px rgba(0, 0, 0, 0.1),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.button-circle:hover {
+    background: linear-gradient(145deg, #f4d7dd, #e6b8c2);
+    transform: translateY(-4px);
+    box-shadow: 
+        0 8px 25px rgba(230, 184, 194, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        inset 0 1px 3px rgba(255, 255, 255, 0.9);
+    border-color: #d4a4b0;
+}
+
+.button-circle:hover .circle-icon {
+    transform: scale(1.15);
+}
+
+.button-circle:hover .circle-label {
+    color: #8b5a6b;
+}
+
+.circle-icon {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+    color: #b5838d;
+}
+
+.circle-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #8b5a6b;
+    transition: color 0.3s ease;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Botão de confirmação especial */
+.button-circle#confirmBtn.confirmed {
+    background: linear-gradient(145deg, #b5838d, #8b5a6b);
+    border-color: #8b5a6b;
+    box-shadow: 
+        0 6px 20px rgba(139, 90, 107, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.button-circle#confirmBtn.confirmed .circle-label {
+    color: #ffffff;
+}
+
+.check-mark {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button-circle#confirmBtn.confirmed .check-mark {
+    display: block;
+    animation: checkPop 0.6s ease-out;
+}
+
+.button-circle#confirmBtn.confirmed .circle-icon,
+.button-circle#confirmBtn.confirmed .circle-label {
+    display: none;
+}
+
+@keyframes checkPop {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    50% { transform: translate(-50%, -50%) scale(1.3); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Mensagem bíblica */
+.biblical-message {
+    font-family: serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #252525;
+    line-height: 1.4;
+    margin-top: 25px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 2.1s forwards;
+}
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .invitation-card {
+        padding: 30px 20px;
+        margin: 10px;
+        max-width: 95%;
+    }
+    
+    .bride-name, .groom-name {
+        font-size: 3rem;
+    }
+    
+    .parents-names {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .parent-name {
+        font-size: 0.75rem;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+    
+    .button-circle {
+        width: 75px;
+        height: 75px;
+        padding: 8px;
+    }
+    
+    .circle-label {
+        font-size: 0.45rem;
+        line-height: 1.1;
+    }
+    
+    .circle-icon {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+    }
+    
+    .wedding-date {
+        font-size: 1.2rem;
+    }
+    
+    .biblical-message {
+        font-size: 0.7rem;
+    }
+    
+    .top-flowers, .bottom-flowers {
+        width: 150px;
+        height: 130px;
+    }
+    
+    .check-mark {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .bride-name, .groom-name {
+        font-size: 2.6rem;
+    }
+    
+    .button-circle {
+        width: 65px;
+        height: 65px;
+        padding: 6px;
+    }
+    
+    .circle-label {
+        font-size: 0.4rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .circle-icon {
+        font-size: 1.1rem;
+        margin-bottom: 2px;
+    }
+    
+    .action-buttons {
+        gap: 15px;
+    }
+    
+    .check-mark {
+        font-size: 1.6rem;
+    }
+}
